@@ -36,6 +36,8 @@ If you have questions concerning this license or the applicable additional terms
 
 #include "ui/GameBustOutWindow.h"
 
+import Math;
+
 #define BALL_RADIUS		12.f
 #define BALL_SPEED		250.f
 #define BALL_MAXSPEED	450.f

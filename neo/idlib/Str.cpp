@@ -34,6 +34,8 @@ If you have questions concerning this license or the applicable additional terms
 
 #include "idlib/Str.h"
 
+import Math;
+
 // DG: idDynamicBlockAlloc isn't thread-safe and idStr is used both in the main thread
 //     and the async thread! For some reason this seems to cause lots of problems on
 //     newer Linux distros if dhewm3 is built with GCC9 or newer (see #391).

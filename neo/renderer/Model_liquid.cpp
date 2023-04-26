@@ -31,6 +31,8 @@ If you have questions concerning this license or the applicable additional terms
 
 #include "renderer/Model_local.h"
 
+import Math;
+
 #define LIQUID_MAX_SKIP_FRAMES	5
 #define LIQUID_MAX_TYPES		3
 

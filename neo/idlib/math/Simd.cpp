@@ -52,6 +52,8 @@ If you have questions concerning this license or the applicable additional terms
 
 #include "idlib/math/Simd.h"
 
+import Math;
+
 idSIMDProcessor	*	processor = NULL;			// pointer to SIMD processor
 idSIMDProcessor *	generic = NULL;				// pointer to generic SIMD implementation
 idSIMDProcessor *	SIMDProcessor = NULL;
@@ -1175,8 +1177,8 @@ void TestMinMax( void ) {
 
 	bestClocksGeneric = 0;
 	for ( i = 0; i < NUMTESTS; i++ ) {
-		min = idMath::INFINITY;
-		max = -idMath::INFINITY;
+		min = idMath::INFINITUM;
+		max = -idMath::INFINITUM;
 		StartRecordTime( start );
 		p_generic->MinMax( min, max, fsrc0, COUNT );
 		StopRecordTime( end );

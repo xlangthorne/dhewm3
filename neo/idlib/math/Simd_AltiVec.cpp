@@ -3040,7 +3040,7 @@ idSIMD_AltiVec::MinMax
 ============
 */
 void VPCALL idSIMD_AltiVec::MinMax( float &min, float &max, const float *src, const int count ) {
-	min = idMath::INFINITY; max = -idMath::INFINITY;
+	min = idMath::INFINITUM; max = -idMath::INFINITUM;
 //#define OPER(X) if ( src[(X)] < min ) {min = src[(X)];} if ( src[(X)] > max ) {max = src[(X)];}
 
 	register vector float v0, v1, v2, v3;
@@ -3112,7 +3112,7 @@ idSIMD_AltiVec::MinMax
 ============
 */
 void VPCALL idSIMD_AltiVec::MinMax( idVec2 &min, idVec2 &max, const idVec2 *src, const int count ) {
-	min[0] = min[1] = idMath::INFINITY; max[0] = max[1] = -idMath::INFINITY;
+	min[0] = min[1] = idMath::INFINITUM; max[0] = max[1] = -idMath::INFINITUM;
 //#define OPER(X) const idVec2 &v = src[(X)]; if ( v[0] < min[0] ) { min[0] = v[0]; } if ( v[0] > max[0] ) { max[0] = v[0]; } if ( v[1] < min[1] ) { min[1] = v[1]; } if ( v[1] > max[1] ) { max[1] = v[1]; }
 
 	idVec2 v;
@@ -3204,7 +3204,7 @@ idSIMD_AltiVec::MinMax
 ============
 */
 void VPCALL idSIMD_AltiVec::MinMax( idVec3 &min, idVec3 &max, const idVec3 *src, const int count ) {
-	min[0] = min[1] = min[2] = idMath::INFINITY; max[0] = max[1] = max[2] = -idMath::INFINITY;
+	min[0] = min[1] = min[2] = idMath::INFINITUM; max[0] = max[1] = max[2] = -idMath::INFINITUM;
 //#define OPER(X) const idVec3 &v = src[(X)]; if ( v[0] < min[0] ) { min[0] = v[0]; } if ( v[0] > max[0] ) { max[0] = v[0]; } if ( v[1] < min[1] ) { min[1] = v[1]; } if ( v[1] > max[1] ) { max[1] = v[1]; } if ( v[2] < min[2] ) { min[2] = v[2]; } if ( v[2] > max[2] ) { max[2] = v[2]; }
 
 	int i = 0;
@@ -3306,7 +3306,7 @@ idSIMD_AltiVec::MinMax
 */
 void VPCALL idSIMD_AltiVec::MinMax( idVec3 &min, idVec3 &max, const idDrawVert *src, const int count ) {
 
-	min[0] = min[1] = min[2] = idMath::INFINITY; max[0] = max[1] = max[2] = -idMath::INFINITY;
+	min[0] = min[1] = min[2] = idMath::INFINITUM; max[0] = max[1] = max[2] = -idMath::INFINITUM;
 	idVec3 v;
 	int i = 0;
 	register vector float vecMin, vecMax;
@@ -3405,7 +3405,7 @@ idSIMD_AltiVec::MinMax
 */
 void VPCALL idSIMD_AltiVec::MinMax( idVec3 &min, idVec3 &max, const idDrawVert *src, const int count ) {
 
-	min[0] = min[1] = min[2] = idMath::INFINITY; max[0] = max[1] = max[2] = -idMath::INFINITY;
+	min[0] = min[1] = min[2] = idMath::INFINITUM; max[0] = max[1] = max[2] = -idMath::INFINITUM;
 	idVec3 v;
 	int i = 0;
 	register vector float vecMin, vecMax;
@@ -3492,7 +3492,7 @@ idSIMD_AltiVec::MinMax
 ============
 */
 void VPCALL idSIMD_AltiVec::MinMax( idVec3 &min, idVec3 &max, const idDrawVert *src, const int *indexes, const int count ) {
-	min[0] = min[1] = min[2] = idMath::INFINITY; max[0] = max[1] = max[2] = -idMath::INFINITY;
+	min[0] = min[1] = min[2] = idMath::INFINITUM; max[0] = max[1] = max[2] = -idMath::INFINITUM;
 
 	idVec3 v;
 	int i = 0;
@@ -3598,7 +3598,7 @@ idSIMD_AltiVec::MinMax
 ============
 */
 void VPCALL idSIMD_AltiVec::MinMax( idVec3 &min, idVec3 &max, const idDrawVert *src, const int *indexes, const int count ) {
-	min[0] = min[1] = min[2] = idMath::INFINITY; max[0] = max[1] = max[2] = -idMath::INFINITY;
+	min[0] = min[1] = min[2] = idMath::INFINITUM; max[0] = max[1] = max[2] = -idMath::INFINITUM;
 
 	idVec3 v;
 	int i = 0;

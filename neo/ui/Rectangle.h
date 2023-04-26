@@ -31,6 +31,8 @@ If you have questions concerning this license or the applicable additional terms
 #include "idlib/containers/List.h"
 #include "idlib/math/Vector.h"
 
+import Math;
+
 //
 // simple rectangle
 //

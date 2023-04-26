@@ -30,6 +30,8 @@ If you have questions concerning this license or the applicable additional terms
 
 #include "tools/compilers/aas/AASBuild_local.h"
 
+import Math;
+
 #define VERTEX_HASH_BOXSIZE				(1<<6)	// must be power of 2
 #define VERTEX_HASH_SIZE				(VERTEX_HASH_BOXSIZE*VERTEX_HASH_BOXSIZE)
 #define EDGE_HASH_SIZE					(1<<14)

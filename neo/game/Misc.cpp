@@ -45,6 +45,8 @@ Various utility objects and functions.
 
 #include "Misc.h"
 
+import Math;
+
 /*
 ===============================================================================
 

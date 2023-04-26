@@ -34,6 +34,8 @@ If you have questions concerning this license or the applicable additional terms
 
 #include "anim/Anim_Testmodel.h"
 
+import Math;
+
 /*
 =============================================================================
 

@@ -31,6 +31,8 @@ If you have questions concerning this license or the applicable additional terms
 
 #include "ai/AAS_local.h"
 
+import Math;
+
 #define SUBSAMPLE_WALK_PATH		1
 #define SUBSAMPLE_FLY_PATH		0
 

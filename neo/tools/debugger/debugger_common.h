@@ -19,7 +19,7 @@
 
 // math
 #include "idlib/math/Simd.h"
-#include "idlib/math/Math.h"
+// #include "idlib/math/Math.h"
 #include "idlib/math/Random.h"
 #include "idlib/math/Complex.h"
 #include "idlib/math/Vector.h"
@@ -158,5 +158,7 @@
 
 // Compilers for map, model, video etc. processing.
 #include "tools/compilers/compiler_public.h"
+
+import Math;
 
 #endif // DEBUGGER_COMMON_H

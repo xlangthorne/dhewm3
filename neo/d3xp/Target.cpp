@@ -41,6 +41,8 @@ If you have questions concerning this license or the applicable additional terms
 
 #include "Target.h"
 
+import Math;
+
 /*
 ===============================================================================
 

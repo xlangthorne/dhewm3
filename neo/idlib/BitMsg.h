@@ -33,6 +33,8 @@ If you have questions concerning this license or the applicable additional terms
 #include "idlib/Dict.h"
 #include "framework/Common.h"
 
+import Math;
+
 /*
 ===============================================================================
 

@@ -38,6 +38,8 @@ If you have questions concerning this license or the applicable additional terms
 
 #include "Grabber.h"
 
+import Math;
+
 #define MAX_DRAG_TRACE_DISTANCE			384.0f
 #define TRACE_BOUNDS_SIZE				3.f
 #define HOLD_DISTANCE					72.f

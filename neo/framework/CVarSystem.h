@@ -29,6 +29,7 @@ If you have questions concerning this license or the applicable additional terms
 #ifndef __CVARSYSTEM_H__
 #define __CVARSYSTEM_H__
 
+#include "sys/platform.h"
 #include "idlib/Dict.h"
 #include "idlib/CmdArgs.h"
 #include "framework/CmdSystem.h"

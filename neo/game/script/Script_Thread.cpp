@@ -34,6 +34,8 @@ If you have questions concerning this license or the applicable additional terms
 
 #include "Script_Thread.h"
 
+import Math;
+
 const idEventDef EV_Thread_Execute( "<execute>", NULL );
 const idEventDef EV_Thread_SetCallback( "<script_setcallback>", NULL );
 

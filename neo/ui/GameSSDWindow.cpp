@@ -35,6 +35,8 @@ If you have questions concerning this license or the applicable additional terms
 
 #include "ui/GameSSDWindow.h"
 
+import Math;
+
 #define Z_NEAR 100.0f
 #define Z_FAR  4000.0f
 #define ENTITY_START_DIST 3000

@@ -35,6 +35,8 @@ If you have questions concerning this license or the applicable additional terms
 
 #include "ui/GameBearShootWindow.h"
 
+import Math;
+
 #define BEAR_GRAVITY 240
 #define BEAR_SIZE 24.f
 #define BEAR_SHRINK_TIME 2000.f

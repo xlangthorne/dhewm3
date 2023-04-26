@@ -30,6 +30,8 @@ If you have questions concerning this license or the applicable additional terms
 
 #include "tools/compilers/aas/AASReach.h"
 
+import Math;
+
 #define INSIDEUNITS							2.0f
 #define INSIDEUNITS_WALKEND					0.5f
 #define INSIDEUNITS_WALKSTART				0.1f

@@ -31,6 +31,8 @@ If you have questions concerning this license or the applicable additional terms
 
 #include "physics/Physics_Parametric.h"
 
+import Math;
+
 CLASS_DECLARATION( idPhysics_Base, idPhysics_Parametric )
 END_CLASS
 

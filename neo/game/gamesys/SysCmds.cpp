@@ -44,6 +44,8 @@ If you have questions concerning this license or the applicable additional terms
 
 #include "SysCmds.h"
 
+import Math;
+
 /*
 ==================
 Cmd_GetFloatArg

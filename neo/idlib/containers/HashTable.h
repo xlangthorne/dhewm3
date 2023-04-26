@@ -29,8 +29,10 @@ If you have questions concerning this license or the applicable additional terms
 #ifndef __HASHTABLE_H__
 #define __HASHTABLE_H__
 
-#include "idlib/math/Math.h"
 #include "idlib/Str.h"
+
+import Math;  // #include "idlib/math/Math.h"
+
 
 /*
 ===============================================================================
@@ -387,7 +389,7 @@ int idHashTable<Type>::GetSpread( void ) const {
 	average = numentries / tablesize;
 	error = 0;
 	for ( i = 0; i < tablesize; i++ ) {
-		numItems = 0;
+		int numItems = 0;
 		for( node = heads[ i ]; node != NULL; node = node->next ) {
 			numItems++;
 		}

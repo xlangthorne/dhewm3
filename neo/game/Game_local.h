@@ -379,7 +379,7 @@ public:
 	void					RegisterEntity( idEntity *ent );
 	void					UnregisterEntity( idEntity *ent );
 
-	bool					RequirementMet( idEntity *activator, const idStr &requires, int removeItem );
+	bool					RequirementMet( idEntity *activator, const idStr &requirement, int removeItem );
 
 	void					AlertAI( idEntity *ent );
 	idActor *				GetAlertEntity( void );

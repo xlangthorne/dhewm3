@@ -25,26 +25,29 @@ If you have questions concerning this license or the applicable additional terms
 
 ===========================================================================
 */
+module; 
 
 #include "sys/platform.h"
 
-#include "idlib/math/Math.h"
+// #include "idlib/math/Math.h"
 
-const float	idMath::PI				= 3.14159265358979323846f;
-const float	idMath::TWO_PI			= 2.0f * PI;
-const float	idMath::HALF_PI			= 0.5f * PI;
-const float	idMath::ONEFOURTH_PI	= 0.25f * PI;
-const float idMath::E				= 2.71828182845904523536f;
-const float idMath::SQRT_TWO		= 1.41421356237309504880f;
-const float idMath::SQRT_THREE		= 1.73205080756887729352f;
-const float	idMath::SQRT_1OVER2		= 0.70710678118654752440f;
-const float	idMath::SQRT_1OVER3		= 0.57735026918962576450f;
-const float	idMath::M_DEG2RAD		= PI / 180.0f;
-const float	idMath::M_RAD2DEG		= 180.0f / PI;
-const float	idMath::M_SEC2MS		= 1000.0f;
-const float	idMath::M_MS2SEC		= 0.001f;
-const float	idMath::INFINITY		= 1e30f;
-const float idMath::FLT_EPSILON		= 1.192092896e-07f;
+module Math;
+
+constexpr float	idMath::PI				= 3.14159265358979323846f;
+constexpr float	idMath::TWO_PI			= 2.0f * PI;
+constexpr float	idMath::HALF_PI			= 0.5f * PI;
+constexpr float	idMath::ONEFOURTH_PI	= 0.25f * PI;
+constexpr float idMath::E				= 2.71828182845904523536f;
+constexpr float idMath::SQRT_TWO		= 1.41421356237309504880f;
+constexpr float idMath::SQRT_THREE		= 1.73205080756887729352f;
+constexpr float	idMath::SQRT_1OVER2		= 0.70710678118654752440f;
+constexpr float	idMath::SQRT_1OVER3		= 0.57735026918962576450f;
+constexpr float	idMath::M_DEG2RAD		= PI / 180.0f;
+constexpr float	idMath::M_RAD2DEG		= 180.0f / PI;
+constexpr float	idMath::M_SEC2MS		= 1000.0f;
+constexpr float	idMath::M_MS2SEC		= 0.001f;
+constexpr float	idMath::INFINITUM		= 1e30f;
+constexpr float idMath::FLOAT_EPSILON	= 1.192092896e-07f;
 
 bool		idMath::initialized		= false;
 dword		idMath::iSqrt[SQRT_TABLE_SIZE];		// inverse square root lookup table

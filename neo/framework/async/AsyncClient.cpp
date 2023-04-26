@@ -36,6 +36,8 @@ If you have questions concerning this license or the applicable additional terms
 
 #include "framework/async/AsyncClient.h"
 
+import Math;
+
 const int SETUP_CONNECTION_RESEND_TIME	= 1000;
 const int EMPTY_RESEND_TIME				= 500;
 const int PREDICTION_FAST_ADJUST		= 4;

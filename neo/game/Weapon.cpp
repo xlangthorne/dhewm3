@@ -40,6 +40,8 @@ If you have questions concerning this license or the applicable additional terms
 
 #include "Weapon.h"
 
+import Math;
+
 extern bool IsDoom3DemoVersion(); // DG: hack to support the Demo version of Doom3
 
 /***********************************************************************

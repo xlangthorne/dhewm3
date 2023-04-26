@@ -432,7 +432,7 @@ void idLCP_Square::GetMaxStep( int d, float dir, float &maxStep, int &limit, int
 
 	// test the current variable
 	if ( dir < 0.0f ) {
-		if ( lo[d] != -idMath::INFINITY ) {
+		if ( lo[d] != -idMath::INFINITUM ) {
 			s = ( lo[d] - f[d] ) / dir;
 			if ( s < maxStep ) {
 				maxStep = s;
@@ -440,7 +440,7 @@ void idLCP_Square::GetMaxStep( int d, float dir, float &maxStep, int &limit, int
 			}
 		}
 	} else {
-		if ( hi[d] != idMath::INFINITY ) {
+		if ( hi[d] != idMath::INFINITUM ) {
 			s = ( hi[d] - f[d] ) / dir;
 			if ( s < maxStep ) {
 				maxStep = s;
@@ -453,7 +453,7 @@ void idLCP_Square::GetMaxStep( int d, float dir, float &maxStep, int &limit, int
 	for ( i = numUnbounded; i < numClamped; i++ ) {
 		if ( delta_f[i] < -LCP_DELTA_FORCE_EPSILON ) {
 			// if there is a low boundary
-			if ( lo[i] != -idMath::INFINITY ) {
+			if ( lo[i] != -idMath::INFINITUM ) {
 				s = ( lo[i] - f[i] ) / delta_f[i];
 				if ( s < maxStep ) {
 					maxStep = s;
@@ -463,7 +463,7 @@ void idLCP_Square::GetMaxStep( int d, float dir, float &maxStep, int &limit, int
 			}
 		} else if ( delta_f[i] > LCP_DELTA_FORCE_EPSILON ) {
 			// if there is a high boundary
-			if ( hi[i] != idMath::INFINITY ) {
+			if ( hi[i] != idMath::INFINITUM ) {
 				s = ( hi[i] - f[i] ) / delta_f[i];
 				if ( s < maxStep ) {
 					maxStep = s;
@@ -558,7 +558,7 @@ bool idLCP_Square::Solve( const idMatX &o_m, idVecX &o_x, const idVecX &o_b, con
 	// permute input so all unbounded variables come first
 	numUnbounded = 0;
 	for ( i = 0; i < m.GetNumRows(); i++ ) {
-		if ( lo[i] == -idMath::INFINITY && hi[i] == idMath::INFINITY ) {
+		if ( lo[i] == -idMath::INFINITUM && hi[i] == idMath::INFINITUM ) {
 			if ( numUnbounded != i ) {
 				Swap( numUnbounded, i );
 			}
@@ -570,7 +570,7 @@ bool idLCP_Square::Solve( const idMatX &o_m, idVecX &o_x, const idVecX &o_b, con
 	boxStartIndex = m.GetNumRows();
 	if ( boxIndex ) {
 		for ( i = m.GetNumRows() - 1; i >= numUnbounded; i-- ) {
-			if ( boxIndex[i] >= 0 && ( lo[i] != -idMath::INFINITY || hi[i] != idMath::INFINITY ) ) {
+			if ( boxIndex[i] >= 0 && ( lo[i] != -idMath::INFINITUM || hi[i] != idMath::INFINITUM ) ) {
 				boxStartIndex--;
 				if ( boxStartIndex != i ) {
 					Swap( boxStartIndex, i );
@@ -622,10 +622,10 @@ bool idLCP_Square::Solve( const idMatX &o_m, idVecX &o_x, const idVecX &o_b, con
 			}
 			for ( j = boxStartIndex; j < m.GetNumRows(); j++ ) {
 				s = o_x[boxIndex[j]];
-				if ( lo[j] != -idMath::INFINITY ) {
+				if ( lo[j] != -idMath::INFINITUM ) {
 					lo[j] = - idMath::Fabs( lo[j] * s );
 				}
-				if ( hi[j] != idMath::INFINITY ) {
+				if ( hi[j] != idMath::INFINITUM ) {
 					hi[j] = idMath::Fabs( hi[j] * s );
 				}
 			}
@@ -1222,7 +1222,7 @@ void idLCP_Symmetric::GetMaxStep( int d, float dir, float &maxStep, int &limit, 
 
 	// test the current variable
 	if ( dir < 0.0f ) {
-		if ( lo[d] != -idMath::INFINITY ) {
+		if ( lo[d] != -idMath::INFINITUM ) {
 			s = ( lo[d] - f[d] ) / dir;
 			if ( s < maxStep ) {
 				maxStep = s;
@@ -1230,7 +1230,7 @@ void idLCP_Symmetric::GetMaxStep( int d, float dir, float &maxStep, int &limit, 
 			}
 		}
 	} else {
-		if ( hi[d] != idMath::INFINITY ) {
+		if ( hi[d] != idMath::INFINITUM ) {
 			s = ( hi[d] - f[d] ) / dir;
 			if ( s < maxStep ) {
 				maxStep = s;
@@ -1243,7 +1243,7 @@ void idLCP_Symmetric::GetMaxStep( int d, float dir, float &maxStep, int &limit, 
 	for ( i = numUnbounded; i < numClamped; i++ ) {
 		if ( delta_f[i] < -LCP_DELTA_FORCE_EPSILON ) {
 			// if there is a low boundary
-			if ( lo[i] != -idMath::INFINITY ) {
+			if ( lo[i] != -idMath::INFINITUM ) {
 				s = ( lo[i] - f[i] ) / delta_f[i];
 				if ( s < maxStep ) {
 					maxStep = s;
@@ -1253,7 +1253,7 @@ void idLCP_Symmetric::GetMaxStep( int d, float dir, float &maxStep, int &limit, 
 			}
 		} else if ( delta_f[i] > LCP_DELTA_FORCE_EPSILON ) {
 			// if there is a high boundary
-			if ( hi[i] != idMath::INFINITY ) {
+			if ( hi[i] != idMath::INFINITUM ) {
 				s = ( hi[i] - f[i] ) / delta_f[i];
 				if ( s < maxStep ) {
 					maxStep = s;
@@ -1348,7 +1348,7 @@ bool idLCP_Symmetric::Solve( const idMatX &o_m, idVecX &o_x, const idVecX &o_b, 
 	// permute input so all unbounded variables come first
 	numUnbounded = 0;
 	for ( i = 0; i < m.GetNumRows(); i++ ) {
-		if ( lo[i] == -idMath::INFINITY && hi[i] == idMath::INFINITY ) {
+		if ( lo[i] == -idMath::INFINITUM && hi[i] == idMath::INFINITUM ) {
 			if ( numUnbounded != i ) {
 				Swap( numUnbounded, i );
 			}
@@ -1360,7 +1360,7 @@ bool idLCP_Symmetric::Solve( const idMatX &o_m, idVecX &o_x, const idVecX &o_b, 
 	boxStartIndex = m.GetNumRows();
 	if ( boxIndex ) {
 		for ( i = m.GetNumRows() - 1; i >= numUnbounded; i-- ) {
-			if ( boxIndex[i] >= 0 && ( lo[i] != -idMath::INFINITY || hi[i] != idMath::INFINITY ) ) {
+			if ( boxIndex[i] >= 0 && ( lo[i] != -idMath::INFINITUM || hi[i] != idMath::INFINITUM ) ) {
 				boxStartIndex--;
 				if ( boxStartIndex != i ) {
 					Swap( boxStartIndex, i );
@@ -1416,10 +1416,10 @@ bool idLCP_Symmetric::Solve( const idMatX &o_m, idVecX &o_x, const idVecX &o_b, 
 			}
 			for ( j = boxStartIndex; j < m.GetNumRows(); j++ ) {
 				s = o_x[boxIndex[j]];
-				if ( lo[j] != -idMath::INFINITY ) {
+				if ( lo[j] != -idMath::INFINITUM ) {
 					lo[j] = - idMath::Fabs( lo[j] * s );
 				}
-				if ( hi[j] != idMath::INFINITY ) {
+				if ( hi[j] != idMath::INFINITUM ) {
 					hi[j] = idMath::Fabs( hi[j] * s );
 				}
 			}

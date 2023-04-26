@@ -32,6 +32,8 @@ If you have questions concerning this license or the applicable additional terms
 
 #include "physics/Physics_Monster.h"
 
+import Math;
+
 CLASS_DECLARATION( idPhysics_Actor, idPhysics_Monster )
 END_CLASS
 

@@ -53,6 +53,8 @@ If you have questions concerning this license or the applicable additional terms
 
 #include "Game_local.h"
 
+import Math;
+
 #ifndef GAME_DLL
 #include "tools/compilers/aas/AASFileManager.h"
 #endif
@@ -3568,11 +3570,11 @@ void idGameLocal::KillBox( idEntity *ent, bool catch_teleport ) {
 idGameLocal::RequirementMet
 ================
 */
-bool idGameLocal::RequirementMet( idEntity *activator, const idStr &requires, int removeItem ) {
-	if ( requires.Length() ) {
+bool idGameLocal::RequirementMet( idEntity *activator, const idStr &requirement, int removeItem ) {
+	if ( requirement.Length() ) {
 		if ( activator->IsType( idPlayer::Type ) ) {
 			idPlayer *player = static_cast<idPlayer *>(activator);
-			idDict *item = player->FindInventoryItem( requires );
+			idDict *item = player->FindInventoryItem( requirement );
 			if ( item ) {
 				if ( removeItem ) {
 					player->RemoveInventoryItem( item );

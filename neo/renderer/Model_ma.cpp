@@ -34,6 +34,8 @@ If you have questions concerning this license or the applicable additional terms
 
 #include "renderer/Model_ma.h"
 
+import Math;
+
 /*
 ======================================================================
 

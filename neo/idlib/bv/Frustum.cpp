@@ -31,6 +31,8 @@ If you have questions concerning this license or the applicable additional terms
 
 #include "idlib/bv/Frustum.h"
 
+import Math;
+
 //#define FRUSTUM_DEBUG
 
 /*
@@ -683,8 +685,8 @@ bool idFrustum::LocalRayIntersection( const idVec3 &start, const idVec3 &dir, fl
 	upScale = dUp * invFar;
 	end = start + dir;
 
-	scale1 = idMath::INFINITY;
-	scale2 = -idMath::INFINITY;
+	scale1 = idMath::INFINITUM;
+	scale2 = -idMath::INFINITUM;
 
 	// test near plane
 	if ( dNear > 0.0f ) {
@@ -1982,8 +1984,8 @@ bool idFrustum::BoundsRayIntersection( const idBounds &bounds, const idVec3 &sta
 	float d1, d2, f;
 	int i, startInside = 1;
 
-	scale1 = idMath::INFINITY;
-	scale2 = -idMath::INFINITY;
+	scale1 = idMath::INFINITUM;
+	scale2 = -idMath::INFINITUM;
 
 	end = start + dir;
 
@@ -2478,8 +2480,8 @@ bool idFrustum::ClipLine( const idVec3 localPoints[8], const idVec3 points[8], i
 	localDir = localEnd - localStart;
 
 	startClip = endClip = -1;
-	scale1 = idMath::INFINITY;
-	scale2 = -idMath::INFINITY;
+	scale1 = idMath::INFINITUM;
+	scale2 = -idMath::INFINITUM;
 
 	fstart = dFar * localStart.y;
 	fend = dFar * localEnd.y;

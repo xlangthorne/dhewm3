@@ -34,6 +34,8 @@ If you have questions concerning this license or the applicable additional terms
 
 #include "IK.h"
 
+import Math;
+
 /*
 ===============================================================================
 
@@ -593,7 +595,7 @@ void idIK_Walk::Evaluate( void ) {
 	animator->CreateFrame( gameLocal.time, false );
 
 	// get the joint positions for the feet
-	lowestHeight = idMath::INFINITY;
+	lowestHeight = idMath::INFINITUM;
 	for ( i = 0; i < numLegs; i++ ) {
 		animator->GetJointTransform( footJoints[i], gameLocal.time, footOrigin, axis );
 		jointOrigins[i] = modelOrigin + footOrigin * modelAxis;
@@ -657,8 +659,8 @@ void idIK_Walk::Evaluate( void ) {
 	}
 
 	// adjust heights of the ankles
-	smallestShift = idMath::INFINITY;
-	largestAnkleHeight = -idMath::INFINITY;
+	smallestShift = idMath::INFINITUM;
+	largestAnkleHeight = -idMath::INFINITUM;
 	for ( i = 0; i < numLegs; i++ ) {
 
 		if ( onGround && ( enabledLegs & ( 1 << i ) ) ) {

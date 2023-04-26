@@ -263,14 +263,14 @@ void VPCALL idSIMD_SSE::MinMax( idVec3 &min, idVec3 &max, const idDrawVert *src,
 	char *max_p;
 
 	/*
-		movss		xmm0, idMath::INFINITY
+		movss		xmm0, idMath::INFINITUM
 		xorps		xmm1, xmm1
 		shufps		xmm0, xmm0, R_SHUFFLEPS( 0, 0, 0, 0 )
 		subps		xmm1, xmm0
 		movaps		xmm2, xmm0
 		movaps		xmm3, xmm1
 	*/
-		xmm0 = _mm_load_ss(&idMath::INFINITY);
+		xmm0 = _mm_load_ss(&idMath::INFINITUM);
 		// To satisfy the compiler use xmm0 instead.
 		xmm1 = _mm_xor_ps(xmm0, xmm0);
 		xmm0 = _mm_shuffle_ps(xmm0, xmm0, R_SHUFFLEPS( 0, 0, 0, 0 ));
@@ -1045,7 +1045,7 @@ ALIGN4_INIT1( float SIMD_SP_PI, idMath::PI );
 ALIGN4_INIT1( float SIMD_SP_halfPI, idMath::HALF_PI );
 ALIGN4_INIT1( float SIMD_SP_twoPI, idMath::TWO_PI );
 ALIGN4_INIT1( float SIMD_SP_oneOverTwoPI, 1.0f / idMath::TWO_PI );
-ALIGN4_INIT1( float SIMD_SP_infinity, idMath::INFINITY );
+ALIGN4_INIT1( float SIMD_SP_infinity, idMath::INFINITUM );
 ALIGN4_INIT4( float SIMD_SP_lastOne, 0.0f, 0.0f, 0.0f, 1.0f );
 
 ALIGN4_INIT1( float SIMD_SP_rsqrt_c0,  3.0f );
@@ -3561,7 +3561,7 @@ idSIMD_SSE::MinMax
 void VPCALL idSIMD_SSE::MinMax( float &min, float &max, const float *src, const int count ) {
 	int i, pre, post;
 
-	min = idMath::INFINITY; max = -idMath::INFINITY;
+	min = idMath::INFINITUM; max = -idMath::INFINITUM;
 
 	__asm
 	{
@@ -3653,7 +3653,7 @@ void VPCALL idSIMD_SSE::MinMax( idVec2 &min, idVec2 &max, const idVec2 *src, con
 	__asm {
 		mov			eax, count
 		test		eax, eax
-		movss		xmm0, idMath::INFINITY
+		movss		xmm0, idMath::INFINITUM
 		xorps		xmm1, xmm1
 		shufps		xmm0, xmm0, R_SHUFFLEPS( 0, 0, 0, 0 )
 		subps		xmm1, xmm0
@@ -3701,7 +3701,7 @@ idSIMD_SSE::MinMax
 void VPCALL idSIMD_SSE::MinMax( idVec3 &min, idVec3 &max, const idVec3 *src, const int count ) {
 	__asm {
 
-		movss		xmm0, idMath::INFINITY
+		movss		xmm0, idMath::INFINITUM
 		xorps		xmm1, xmm1
 		shufps		xmm0, xmm0, R_SHUFFLEPS( 0, 0, 0, 0 )
 		subps		xmm1, xmm0
@@ -3785,7 +3785,7 @@ void VPCALL idSIMD_SSE::MinMax( idVec3 &min, idVec3 &max, const idDrawVert *src,
 
 	__asm {
 
-		movss		xmm0, idMath::INFINITY
+		movss		xmm0, idMath::INFINITUM
 		xorps		xmm1, xmm1
 		shufps		xmm0, xmm0, R_SHUFFLEPS( 0, 0, 0, 0 )
 		subps		xmm1, xmm0
@@ -3869,7 +3869,7 @@ void VPCALL idSIMD_SSE::MinMax( idVec3 &min, idVec3 &max, const idDrawVert *src,
 
 	__asm {
 
-		movss		xmm0, idMath::INFINITY
+		movss		xmm0, idMath::INFINITUM
 		xorps		xmm1, xmm1
 		shufps		xmm0, xmm0, R_SHUFFLEPS( 0, 0, 0, 0 )
 		subps		xmm1, xmm0

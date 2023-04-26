@@ -35,6 +35,8 @@ If you have questions concerning this license or the applicable additional terms
 
 #include "physics/Physics_RigidBody.h"
 
+import Math;
+
 CLASS_DECLARATION( idPhysics_Base, idPhysics_RigidBody )
 END_CLASS
 

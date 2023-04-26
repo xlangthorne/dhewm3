@@ -32,6 +32,8 @@ If you have questions concerning this license or the applicable additional terms
 
 #include "Class.h"
 
+import Math;
+
 /*
 
 Base class for all C++ objects.  Provides fast run-time type checking and run-time

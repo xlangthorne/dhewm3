@@ -34,6 +34,8 @@ If you have questions concerning this license or the applicable additional terms
 
 #include "BrittleFracture.h"
 
+import Math;
+
 CLASS_DECLARATION( idEntity, idBrittleFracture )
 	EVENT( EV_Activate, idBrittleFracture::Event_Activate )
 	EVENT( EV_Touch, idBrittleFracture::Event_Touch )

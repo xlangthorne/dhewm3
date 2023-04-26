@@ -30,6 +30,8 @@ If you have questions concerning this license or the applicable additional terms
 
 #include "idlib/bv/Box.h"
 
+import Math;
+
 idBox box_zero( vec3_zero, vec3_zero, mat3_identity );
 
 /*
@@ -306,7 +308,7 @@ bool idBox::AddBox( const idBox &a ) {
 	}
 
 	// get the bounds with the smallest volume
-	bestv = idMath::INFINITY;
+	bestv = idMath::INFINITUM;
 	besti = 0;
 	for ( i = 0; i < 4; i++ ) {
 		v = bounds[i].GetVolume();
@@ -618,8 +620,8 @@ bool idBox::RayIntersection( const idVec3 &start, const idVec3 &dir, float &scal
 	localStart = ( start - center ) * axis.Transpose();
 	localDir = dir * axis.Transpose();
 
-	scale1 = -idMath::INFINITY;
-	scale2 = idMath::INFINITY;
+	scale1 = -idMath::INFINITUM;
+	scale2 = idMath::INFINITUM;
 	return	BoxPlaneClip(  localDir.x, -localStart.x - extents[0], scale1, scale2 ) &&
 			BoxPlaneClip( -localDir.x,  localStart.x - extents[0], scale1, scale2 ) &&
 			BoxPlaneClip(  localDir.y, -localStart.y - extents[1], scale1, scale2 ) &&

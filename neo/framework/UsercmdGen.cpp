@@ -35,6 +35,8 @@ If you have questions concerning this license or the applicable additional terms
 
 #include "framework/UsercmdGen.h"
 
+import Math;
+
 /*
 ================
 usercmd_t::ByteSwap
